@@ -5,6 +5,9 @@ from dotenv import load_dotenv
 import google.generativeai as genai
 from google.generativeai import types
 from functions.get_files_info import schema_get_files_info, get_files_info
+from functions.get_file_content import schema_get_files_content
+from functions.run_python_file import schema_run_python_file
+from functions.write_file import schema_write_file
 
 
 def print_response(resp):
@@ -37,7 +40,10 @@ def main():
 
         When a user asks a question or makes a request, you may call the appropriate function.
         Available operations:
-        - get_files_info: List files and directories in the working directory.
+        - get_files_info: List files and directories in the working directory or in sub-directories.
+        - get_files_content: Reads the content of the file in the working directory.
+        - write_file: Writes to the file(creates or update)
+        - run_python_file: Run the python file with optional arguments
     """
 
     # History persistence file
@@ -53,7 +59,11 @@ def main():
 
     # Register tools
     available_functions = types.Tool(
-        function_declarations=[schema_get_files_info]
+        function_declarations=[schema_get_files_info,
+                               schema_write_file,
+                               schema_get_files_content,
+                               schema_run_python_file,
+                               ]
     )
 
     # Pick the model

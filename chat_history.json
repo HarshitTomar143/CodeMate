@@ -142,5 +142,77 @@
     "parts": [
       "Karl Marx was German. He was born in Trier, Germany (then part of the Kingdom of Prussia). While he spent significant portions of his life in other countries, particularly England, he was born and raised in Germany, making him a German philosopher and economist.\n"
     ]
+  },
+  {
+    "role": "user",
+    "parts": [
+      "Where does he belong to?"
+    ]
+  },
+  {
+    "role": "model",
+    "parts": [
+      "Karl Marx was German. He was born in Trier, Germany (then part of the Kingdom of Prussia).\n"
+    ]
+  },
+  {
+    "role": "user",
+    "parts": [
+      "What are the files in my directory?"
+    ]
+  },
+  {
+    "role": "user",
+    "parts": [
+      "What are the files in my cmd  directory?"
+    ]
+  },
+  {
+    "role": "model",
+    "parts": [
+      "I am sorry, I cannot fulfill this request. The `get_files_info` tool does not allow specifying the 'cmd' directory."
+    ]
+  },
+  {
+    "role": "user",
+    "parts": [
+      "What are the files in my calculator directory?"
+    ]
+  },
+  {
+    "role": "model",
+    "parts": [
+      "I am sorry, I cannot fulfill this request. The `get_files_info` tool does not allow specifying the 'calculator' directory."
+    ]
+  },
+  {
+    "role": "user",
+    "parts": [
+      "What are the files in my calculator directory?"
+    ]
+  },
+  {
+    "role": "user",
+    "parts": [
+      "Create a new text file in the functions directory"
+    ]
+  },
+  {
+    "role": "model",
+    "parts": [
+      "I can create a new file, but I need you to tell me what content you want to write to the file and what you want to name the file. Also, confirm that you want to create the file inside the 'functions' directory.\n"
+    ]
+  },
+  {
+    "role": "user",
+    "parts": [
+      "okay so create the file named data.json with any sample json content in that file create the file in the function directory "
+    ]
+  },
+  {
+    "role": "user",
+    "parts": [
+      "is the file created? "
+    ]
   }
 ]

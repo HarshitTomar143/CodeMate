@@ -1,4 +1,5 @@
 import os
+from google.generativeai import types
 
 from config import MAX_CHARS
 
@@ -24,3 +25,18 @@ def get_file_content(working_directory, file_path):
 
     except Exception as e:
         return f'Error reading file {file_path}: {str(e)}'    
+    
+schema_get_files_content = types.FunctionDeclaration(
+    name="get_files_content",
+    description="Gets the content of the given file as a string , constrained to the working directory.",
+    parameters={
+        "type": "object",
+        "properties": {
+            "file_path": {
+                "type": "string",
+                "description": "The path to the file, from the working directory.",
+            },
+        },
+        "required": [],
+    },
+)    
