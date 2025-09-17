@@ -8,6 +8,7 @@ from functions.get_files_info import schema_get_files_info, get_files_info
 from functions.get_file_content import schema_get_files_content
 from functions.run_python_file import schema_run_python_file
 from functions.write_file import schema_write_file
+from call_functions import call_function
 
 
 def print_response(resp):
@@ -118,6 +119,8 @@ def main():
     with open(history_file, "w") as f:
         json.dump(messages, f, indent=2)
 
+
+   
 
 if __name__ == "__main__":
     main()
